@@ -1,18 +1,18 @@
-# svelte-paginate
+# sveltestrap-paginate
 
-A Svelte plugin for paginating your data in no time.
+A Svelte plugin for paginating your data in no time with sveltestrap.
 
 ## Installation
 
 ```bash
-npm install -D svelte-paginate
+yarn add hazg/sveltestrap-paginate
 ```
 
 ## Usage
 
 ```html
 <script>
-  import { paginate, LightPaginationNav } from 'svelte-paginate'
+  import { paginate, SveltestrapPagination } from 'sveltestrap-paginate'
 
   let items = [...]
   let currentPage = 1
@@ -28,7 +28,9 @@ npm install -D svelte-paginate
   {/each}
 </ul>
 
-<LightPaginationNav
+<!-- OR -->
+
+<SveltestrapPagination
   totalItems="{items.length}"
   pageSize="{pageSize}"
   currentPage="{currentPage}"
@@ -42,9 +44,9 @@ In this example, we're paginating the data in the `items` list. Instead of displ
 
 Since we've defined `paginatedItems` as a computed data, it should update the displayed paginated items whenever the `currentPage` changes.
 
-To navigate between pages you can either create your own navigation component or use one of the navigation components that come with `svelte-paginate` (such as `<PaginationNav/>`, `<LightPaginationNav/>`, or `<DarkPaginationNav/>`). Either way, you just need a way to update `currentPage`.
+To navigate between pages you can either create your own navigation component or use one of the navigation components that come with `svelte-paginate` (such as `<SveltestrapPagination/>`. Either way, you just need a way to update `currentPage`.
 
-## `<PaginationNav/>`
+## `<SveltestrapPagination/>`
 
 For this component to work, it needs to know:
 - `totalItems`: the total number of the original list (unpaginated list).
@@ -76,43 +78,6 @@ You can disable `limit` by setting it to `null`, which is the default value.
 ## `showStepOptions`
 
 If you set this prop to `true`, it will display the previous and next arrows on the navigation.
-
-## Customizing the styling of the navigation component
-
-`svelte-paginate` comes with two themed navigation components: `<LightPaginationNav/>` and `<DarkPaginationNav/>`. Both components use `<PaginationNav/>` as the base navigation component. They are just modifying its CSS.
-
-If you want to create your own version, wrap the `<PaginationNav/>` with a div and then use the following CSS selector:
-
-- `.your-nav :global(.pagination-nav)`: The navigation container element.
-- `.your-nav :global(.option)`: Each option in the navigation (including ellipsis, next and prev buttons).
-- `.your-nav :global(.option.active)`: The currently active page number.
-- `.your-nav :global(.option.ellipsis)`: The ellipsis option.
-- `.your-nav :global(.option.number)`: Only page numbers.
-- `.your-nav :global(.option.prev)`: The prev option.
-- `.your-nav :global(.option.next)`: The next option.
-- `.your-nav :global(.option.disabled)`: Targets the prev and next options when they are disabled (when you're on the first or last page).
-
-## Customizing the options of the navigation component
-
-You can also change the content of each option type through slots. For example, if you want to display page numbers using this format: `Page: {pageNumber}`, you can do this:
-
-```html
-<PaginationNav
-  ...
-  let:value="{pageNumber}"
->
-  <span slot="number">
-    Page: {pageNumber}
-  </span>
-</PaginationNav>
-```
-
-So using the `number` slot with its `value`, you can update how page numbers are displayed. Here's a list for the other option types:
-
-- Ellipsis: `<span slot="ellipsis">`
-- Previous: `<span slot="prev">`
-- Next: `<span slot="next">`
-
 
 ## License
 

@@ -1,14 +1,14 @@
 {
-  "name": "svelte-paginate",
+  "name": "sveltestrap-paginate",
   "version": "0.0.1",
   "main": "src/index.js",
-  "description": "A Svelte plugin for paginating your data in no time",
+  "description": "A Svelte plugin for paginating your data in no time with sveltestrap",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TahaSh/svelte-paginate"
+    "url": "https://github.com/hazg/sveltestrap-paginate"
   },
-  "bugs": "https://github.com/TahaSh/svelte-paginate/issues",
+  "bugs": "https://github.com/hazg/sveltestrap-paginate/issues",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
@@ -20,7 +20,8 @@
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.1.0",
-    "svelte": "^3.12.1"
+    "svelte": "^3.12.1",
+    "sveltestrap": "bestguy/sveltestrap"
   },
   "scripts": {
     "autobuild": "rollup -c rollup.config.js -w",
