@@ -27,7 +27,6 @@
   $: totalPages = Math.ceil(totalItems / pageSize)
 
   function handleOptionClick (option) {
-    console.log(option)
     dispatch('setPage', { page: option.value })
   }
 </script>
