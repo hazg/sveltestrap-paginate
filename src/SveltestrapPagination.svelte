@@ -11,20 +11,20 @@
   const dispatch = createEventDispatcher()
 
   export let totalItems = 0
-  export let pageSize = 1
+  export let perPage = 20
   export let currentPage = 1
   export let limit = null
   export let showStepOptions = false
 
   $: options = generateNavigationOptions({
     totalItems,
-    pageSize,
+    perPage,
     currentPage,
     limit,
     showStepOptions
   })
 
-  $: totalPages = Math.ceil(totalItems / pageSize)
+  $: totalPages = Math.ceil(totalItems / perPage)
 
   function handleOptionClick (option) {
     dispatch('setPage', { page: option.value })

@@ -4,8 +4,8 @@ import {
   ELLIPSIS
 } from '../src/symbolTypes'
 
-export default function ({ totalItems, pageSize, currentPage, limit = null, showStepOptions = false })  {
-  const totalPages = Math.ceil(totalItems / pageSize)
+export default function ({ totalItems, perPage, currentPage, limit = null, showStepOptions = false })  {
+  const totalPages = Math.ceil(totalItems / perPage)
   const limitThreshold = getLimitThreshold({ limit })
   const limited = limit && totalPages > limitThreshold
   let options = limited

@@ -16,8 +16,8 @@ yarn add hazg/sveltestrap-paginate
 
   let items = [...]
   let currentPage = 1
-  let pageSize = 4
-  $: paginatedItems = paginate({ items, pageSize, currentPage })
+  let perPage = 4
+  $: paginatedItems = paginate({ items, perPage, currentPage })
 </script>
 
 <ul class="items">
@@ -32,7 +32,7 @@ yarn add hazg/sveltestrap-paginate
 
 <SveltestrapPagination
   totalItems="{items.length}"
-  pageSize="{pageSize}"
+  perPage="{perPage}"
   currentPage="{currentPage}"
   limit="{1}"
   showStepOptions="{true}"
@@ -50,7 +50,7 @@ To navigate between pages you can either create your own navigation component or
 
 For this component to work, it needs to know:
 - `totalItems`: the total number of the original list (unpaginated list).
-- `pageSize`: the number of items displayed per page.
+- `perPage`: the number of items displayed per page.
 - `currentPage`: the currently selected page.
 
 This will display all page links in the navigation. If you want to limit the maximum number of the displayed links, use the `limit` prop.

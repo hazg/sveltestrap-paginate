@@ -12,8 +12,8 @@
       title: `Item ${index + 1}`
     }))
   let currentPage = 1
-  let pageSize = 4
-  $: paginatedItems = paginate({ items, pageSize, currentPage })
+  let perPage = 4
+  $: paginatedItems = paginate({ items, perPage, currentPage })
 </script>
 
 <main>
@@ -31,7 +31,7 @@
 
   <LightPaginationNav
     currentPage={currentPage}
-    pageSize={pageSize}
+    perPage={perPage}
     totalItems={items.length}
     limit="{1}"
     showStepOptions="{true}"
@@ -39,7 +39,7 @@
   />
   <DarkPaginationNav
     currentPage={currentPage}
-    pageSize={pageSize}
+    perPage={perPage}
     totalItems={items.length}
     limit="{1}"
     showStepOptions="{true}"
