@@ -5,7 +5,7 @@ import livereload from 'rollup-plugin-livereload'
 
 export default [
 	{
-		input: 'example/main.js',
+		input: 'src/SveltestrapPagination.svelte',
 		output: {
 			sourcemap: true,
 			format: 'iife',

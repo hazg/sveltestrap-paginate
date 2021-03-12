@@ -1,9 +1,15 @@
 {
   "name": "sveltestrap-paginate",
-  "version": "0.0.1",
-  "main": "src/index.js",
+  "version": "0.0.2",
+  "main": "src/SveltestrapPagination.svelte",
   "description": "A Svelte plugin for paginating your data in no time with sveltestrap",
   "license": "MIT",
+  "keywords": [
+    "svelte",
+    "sveltestrap",
+    "bootstrap",
+    "paginate"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/hazg/sveltestrap-paginate"
