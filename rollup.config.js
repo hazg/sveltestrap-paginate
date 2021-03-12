@@ -15,12 +15,12 @@ const { name } = pkg
 export default {
   input: 'src/SveltestrapPagination.svelte',
   output: [
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: !production,
-      name
-    },
+    // {
+    //   file: pkg.module,
+    //   format: 'es',
+    //   sourcemap: !production,
+    //   name
+    // },
     {
       file: pkg.main,
       format: 'umd',
