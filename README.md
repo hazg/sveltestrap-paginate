@@ -2,6 +2,10 @@
 
 A Svelte plugin for paginating your data in no time with sveltestrap.
 
+dev version
+===========
+do not use in production
+
 ## Installation
 
 ```bash

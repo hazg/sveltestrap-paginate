@@ -1,6 +1,6 @@
 {
   "name": "sveltestrap-paginate",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "src/SveltestrapPagination.svelte",
   "svelte": "src/SveltestrapPagination.svelte",
   "description": "A Svelte plugin for paginating your data in no time with sveltestrap",
